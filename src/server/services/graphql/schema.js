@@ -14,8 +14,25 @@ const typeDefinitions = `
     posts: [Post]
   }
 
+  input PostInput {
+    text: String!
+  }
+
+  input UserInput {
+    username: String!
+    avatar: String!
+  }
+
+  type RootMutation {
+    addPost (
+      post: PostInput!
+      user: UserInput!
+    ): Post
+  }
+
   schema {
     query: RootQuery
+    mutation: RootMutation
   }
 `;
 
