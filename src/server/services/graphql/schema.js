@@ -19,7 +19,7 @@ const typeDefinitions = `
   }
 
   type Chat {
-    id: int
+    id: Int
     messages: [Message]
     users: [User]
   }
