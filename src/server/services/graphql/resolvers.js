@@ -1,9 +1,8 @@
 import logger from '../../helpers/logger';
-const { Post, User } = db.models;
 
 export default function resolver() {
   const { db } = this;
-  const { Post } = db.models;
+  const { Post, User } = db.models;
 
   const resolvers = {
     Post: {
