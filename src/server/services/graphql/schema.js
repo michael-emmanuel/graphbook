@@ -6,12 +6,27 @@ const typeDefinitions = `
   }
 
   type User {
+    id: Int
     avatar: String
     username: String
   }
 
+  type Message {
+    id: Int
+    text: String
+    chat: Chat
+    user: User
+  }
+
+  type Chat {
+    id: int
+    messages: [Message]
+    users: [User]
+  }
+
   type RootQuery {
     posts: [Post]
+    chats: [Chat]
   }
 
   input PostInput {
